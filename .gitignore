@@ -261,6 +261,6 @@ __pycache__/
 *.pyc
 *.ncrunchsolution
 
-/BuildScript/Tools/*
-!/BuildScript/Tools/packages.config
-!/BuildScript/Tools/packages.config.md5sum
+/Auction/build/Tools/*
+!/Auction/build/Tools/packages.config
+!/Auction/build/Tools/packages.config.md5sum
