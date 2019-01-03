@@ -10,3 +10,4 @@ Scenario: Opening an auction successfully
 	| X     | 1000          | 2020-01-01 |
 	When I open the auction
 	Then I should be able to see my auction in the list of open auctions
+
