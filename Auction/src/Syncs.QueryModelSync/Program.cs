@@ -16,10 +16,9 @@ namespace Syncs.QueryModelSync
             connection.ConnectAsync().Wait();
 
             var credential = new UserCredentials("admin", "changeit");
-            //connection.SubscribeToAllAsync(false, EventAppeared, SubscriptionDropped, credential).Wait();
-            var settings = new CatchUpSubscriptionSettings(4096, 4096, false, false);
+            connection.SubscribeToAllAsync(false, EventAppeared, SubscriptionDropped, credential).Wait();
+            //var settings = new CatchUpSubscriptionSettings(4096, 4096, false, false);
             //connection.SubscribeToAllFrom(Position.Start, settings, CatchUpEventAppeared, CatchUpSubscriptionDropped);
-            connection.SubscribeToStreamFrom("Auction-185f0b86-8c1e-442c-8767-cdbf480b321f",0, settings, CatchUpEventAppeared, CatchUpSubscriptionDropped);
 
             Console.WriteLine("Subscription started !");
             Console.ReadLine();
