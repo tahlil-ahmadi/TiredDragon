@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using AuctionManagement.Domain.Model.Auctions;
+using AuctionManagement.Domain.Model.Participants;
 
 namespace AuctionManagement.Domain.Tests.Unit.Utility
 {
@@ -32,7 +33,7 @@ namespace AuctionManagement.Domain.Tests.Unit.Utility
 
         public Auction Build()
         {
-            return new Auction(this.SellerId, this.ProductId , this.StartingPrice, this.EndDateTime);
+            return new Auction(new Participant(this.SellerId,"X"), this.ProductId , this.StartingPrice, this.EndDateTime);
         }
     }
 }
