@@ -31,11 +31,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syncs.BusDispatcher", "Sync
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "application", "application", "{07C8771C-24D5-462E-A26F-BE1102312010}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionManagement.Application", "AuctionManagement.Application\AuctionManagement.Application.csproj", "{FA20AD59-A824-4DA4-81F8-687865AB1F7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionManagement.Application", "AuctionManagement.Application\AuctionManagement.Application.csproj", "{FA20AD59-A824-4DA4-81F8-687865AB1F7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionManagement.Application.Contracts", "AuctionManagement.Application.Contracts\AuctionManagement.Application.Contracts.csproj", "{2B3F50F9-661E-45A2-B5E5-64F9010931BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionManagement.Application.Contracts", "AuctionManagement.Application.Contracts\AuctionManagement.Application.Contracts.csproj", "{2B3F50F9-661E-45A2-B5E5-64F9010931BD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateways", "gateways", "{6D7DF3E2-DDD4-47BB-B164-46030F018785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{07B30F17-2B64-4270-897E-4F5E848DD539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionManagement.Config", "AuctionManagement.Config\AuctionManagement.Config.csproj", "{9A8A8DF3-92EA-41C7-B58E-DC1886724533}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionManagement.Gateways.RestApi", "AuctionManagement.Gateways.RestApi\AuctionManagement.Gateways.RestApi.csproj", "{48132310-CFB0-4555-AF76-20DDCA460499}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +85,18 @@ Global
 		{2B3F50F9-661E-45A2-B5E5-64F9010931BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B3F50F9-661E-45A2-B5E5-64F9010931BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B3F50F9-661E-45A2-B5E5-64F9010931BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07B30F17-2B64-4270-897E-4F5E848DD539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07B30F17-2B64-4270-897E-4F5E848DD539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07B30F17-2B64-4270-897E-4F5E848DD539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07B30F17-2B64-4270-897E-4F5E848DD539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8A8DF3-92EA-41C7-B58E-DC1886724533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8A8DF3-92EA-41C7-B58E-DC1886724533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8A8DF3-92EA-41C7-B58E-DC1886724533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8A8DF3-92EA-41C7-B58E-DC1886724533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48132310-CFB0-4555-AF76-20DDCA460499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48132310-CFB0-4555-AF76-20DDCA460499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48132310-CFB0-4555-AF76-20DDCA460499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48132310-CFB0-4555-AF76-20DDCA460499}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +117,9 @@ Global
 		{FA20AD59-A824-4DA4-81F8-687865AB1F7D} = {07C8771C-24D5-462E-A26F-BE1102312010}
 		{2B3F50F9-661E-45A2-B5E5-64F9010931BD} = {07C8771C-24D5-462E-A26F-BE1102312010}
 		{6D7DF3E2-DDD4-47BB-B164-46030F018785} = {E1FA3F54-6537-470E-A491-768B54A82E1F}
+		{07B30F17-2B64-4270-897E-4F5E848DD539} = {6E4E9412-65B1-4203-83B0-DE85701DF42A}
+		{9A8A8DF3-92EA-41C7-B58E-DC1886724533} = {24863D47-0689-4B9A-B7D2-CFFF8902CB26}
+		{48132310-CFB0-4555-AF76-20DDCA460499} = {6D7DF3E2-DDD4-47BB-B164-46030F018785}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3E2F8D4-BDF8-4FE4-B925-C064D0012230}

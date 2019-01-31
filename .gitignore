@@ -264,3 +264,7 @@ __pycache__/
 /Auction/build/Tools/*
 !/Auction/build/Tools/packages.config
 !/Auction/build/Tools/packages.config.md5sum
+
+/Framework/buildscript/Tools/*
+!/Framework/buildscript/Tools/packages.config
+!/Framework/buildscript/Tools/packages.config.md5sum

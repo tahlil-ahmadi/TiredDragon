@@ -1,5 +1,18 @@
 {
-  "ReRoutes": [],
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/Au/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post","Delete","Put" ]
+    }
+  ],
   "GlobalConfiguration": {
     "BaseUrl": "https://localhost:8080"
   }
