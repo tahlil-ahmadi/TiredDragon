@@ -7,16 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="fluentassertions" Version="5.5.3" />
+    <PackageReference Include="fluentassertions" Version="5.6.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
-    <PackageReference Include="nbuilder" Version="6.0.0" />
-    <PackageReference Include="TestStack.BDDfy" Version="4.3.2" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\AuctionManagement.Domain\AuctionManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\src\PartyManagement.Domain\PartyManagement.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -14,6 +14,7 @@ namespace PartyManagement.Persistence.NH.Mappings
             {
                 mapper.Property(a=>a.Id, a=> a.Column("Id"));
             });
+            Property(a=>a.State, a=>a.Type<PartyStateType>());
             IdBag(a=>a.Phones, mapper =>
             {
                 mapper.Table("Phones");

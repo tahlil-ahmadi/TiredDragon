@@ -46,6 +46,10 @@
     <Compile Include="Parties\Party.cs" />
     <Compile Include="Parties\IndividualParty.cs" />
     <Compile Include="Parties\LegalParty.cs" />
+    <Compile Include="Parties\States\StateValueAttribute.cs" />
+    <Compile Include="Parties\States\InProgressState.cs" />
+    <Compile Include="Parties\States\ConfirmedState.cs" />
+    <Compile Include="Parties\States\PartyState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -16,17 +16,10 @@ namespace PartyManagement.Persistence.NH.Tests.Integration
             var session = factory.OpenSession();
 
             session.BeginTransaction();
-
             var party = session.Get<IndividualParty>(new PartyId(1));
-            var phones = new List<Phone>()
-            {
-                new Phone("021","11"),
-                new Phone("021","44"),
-            };
-            party.AssignPhones(phones);
-
-            session.Save(party);
+            party.Confirm();
             session.Transaction.Commit();
+
         }
     }
 }

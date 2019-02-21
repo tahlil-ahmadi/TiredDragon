@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyManagement.Persistence
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyManagement.Persistence.NH.Tests.Integration", "tests\PartyManagement.Persistence.NH.Tests.Integration\PartyManagement.Persistence.NH.Tests.Integration.csproj", "{330D9DA0-63B5-46DA-B98F-559FBAC80ACC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyManagement.Domain.Tests.Unit", "tests\PartyManagement.Domain.Tests.Unit\PartyManagement.Domain.Tests.Unit.csproj", "{CF5EB235-8E73-4803-A9B9-245DCDA644E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{330D9DA0-63B5-46DA-B98F-559FBAC80ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{330D9DA0-63B5-46DA-B98F-559FBAC80ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{330D9DA0-63B5-46DA-B98F-559FBAC80ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5EB235-8E73-4803-A9B9-245DCDA644E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5EB235-8E73-4803-A9B9-245DCDA644E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5EB235-8E73-4803-A9B9-245DCDA644E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5EB235-8E73-4803-A9B9-245DCDA644E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{BE2F75E3-F02E-4152-BB90-F996ECF2D30B} = {C3C0F67E-14D1-4A2D-91A7-8EE93D364CBA}
 		{27A74198-EE62-44F5-81ED-82D5BDB9C6C7} = {BE2F75E3-F02E-4152-BB90-F996ECF2D30B}
 		{330D9DA0-63B5-46DA-B98F-559FBAC80ACC} = {158E29E9-5B23-405C-A724-BB0DE51D93A9}
+		{CF5EB235-8E73-4803-A9B9-245DCDA644E4} = {158E29E9-5B23-405C-A724-BB0DE51D93A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C99F3AA-7104-4A65-948C-8343DE0185EA}

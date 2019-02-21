@@ -59,6 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mappings\PartyStateType.cs" />
+    <Compile Include="Mappings\ImmutableUserType.cs" />
     <Compile Include="Mappings\IndividualPartyMapping.cs" />
     <Compile Include="Mappings\PartyMapping.cs" />
     <Compile Include="SessionFactoryBuilder.cs" />
