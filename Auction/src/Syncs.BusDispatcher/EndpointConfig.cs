@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using AuctionManagement.Domain.Contracts;
 using NServiceBus;
 
@@ -14,12 +12,17 @@ namespace Syncs.BusDispatcher
         {
             var config = new EndpointConfiguration("AuctionManagement.Dispatcher");
             config.SendFailedMessagesTo("AuctionManagement.Dispatcher.Error");
-            config.UseTransport<MsmqTransport>();
-            config.UsePersistence<InMemoryPersistence>();
             config.EnableInstallers();
+            ConfigTransport(config);
             config.Conventions().DefiningEventsAs(a => typeof(DomainEvent).IsAssignableFrom(a));
-
             return Endpoint.Start(config).Result;
+        }
+
+        private static void ConfigTransport(EndpointConfiguration config)
+        {
+            var transport = config.UseTransport<RabbitMQTransport>();
+            transport.ConnectionString("host=localhost");
+            transport.UseConventionalRoutingTopology();
         }
     }
 }

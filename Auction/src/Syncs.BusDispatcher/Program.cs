@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,35 +12,36 @@ namespace Syncs.BusDispatcher
 {
     class Program
     {
-        private static IEndpointInstance bus;
+        private static IEndpointInstance _bus;
         static void Main(string[] args)
         {
-            bus = EndpointConfig.Config();
+            _bus = EndpointConfig.Config();
 
             var connection = EventStoreConnection.Create(new IPEndPoint(IPAddress.Loopback, 1113));
             connection.ConnectAsync().Wait();
-
             var credential = new UserCredentials("admin", "changeit");
-            //TODO: change to catch-up subscription
             connection.SubscribeToAllAsync(false, EventAppeared, SubscriptionDropped, credential).Wait();
 
-            Console.WriteLine("Subscription started !");
             Console.ReadLine();
         }
-
-        private static void SubscriptionDropped(EventStoreSubscription arg1, SubscriptionDropReason arg2, Exception arg3)
+        private static async Task EventAppeared(EventStoreSubscription arg1, ResolvedEvent resolvedEvent)
         {
-            //...
-        }
-        private static async Task EventAppeared(EventStoreSubscription arg1, ResolvedEvent resolveEvent)
-        {
-            var type = Type.GetType(resolveEvent.Event.EventType);
+            var type = Type.GetType(resolvedEvent.Event.EventType);
             if (type != null && typeof(DomainEvent).IsAssignableFrom(type))
             {
-                var domainEvent = JsonConvert.DeserializeObject(Encoding.UTF8.GetString(resolveEvent.Event.Data),type);
-                await bus.Publish(domainEvent);
-                Console.WriteLine($"event published on bus");
+                var json = Encoding.UTF8.GetString(resolvedEvent.Event.Data);
+                var instance = JsonConvert.DeserializeObject(json, type);
+                await PublishOnBus(instance);
             }
+        }
+        private static async Task PublishOnBus(object message)
+        {
+            await _bus.Publish(message);
+            Console.WriteLine("published on bus !");
+        }
+        private static void SubscriptionDropped(EventStoreSubscription arg1, SubscriptionDropReason arg2, Exception arg3)
+        {
+            Console.WriteLine("Subscription Dropped !");
         }
     }
 }
