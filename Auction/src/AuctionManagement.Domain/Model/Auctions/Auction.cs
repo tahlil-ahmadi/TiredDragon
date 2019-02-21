@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using AuctionManagement.Domain.Contracts;
+using AuctionManagement.Domain.Framework;
 using AuctionManagement.Domain.Model.Auctions.Exceptions;
 using AuctionManagement.Domain.Model.Participants;
 

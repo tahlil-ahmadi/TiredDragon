@@ -1,4 +1,4 @@
-﻿namespace AuctionManagement.Domain.Model
+﻿namespace AuctionManagement.Domain.Framework
 {
     public class Entity<TKey>
     {

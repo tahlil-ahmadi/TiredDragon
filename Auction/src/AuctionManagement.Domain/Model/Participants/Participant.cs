@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using AuctionManagement.Domain.Contracts;
+using AuctionManagement.Domain.Framework;
 
 namespace AuctionManagement.Domain.Model.Participants
 {

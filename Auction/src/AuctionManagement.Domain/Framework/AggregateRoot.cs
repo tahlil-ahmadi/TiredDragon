@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using AuctionManagement.Domain.Contracts;
 
-namespace AuctionManagement.Domain.Model
+namespace AuctionManagement.Domain.Framework
 {
     public abstract class AggregateRoot<TKey> : Entity<TKey>
     {

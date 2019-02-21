@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
+using AuctionManagement.Domain.Framework;
 using AuctionManagement.Domain.Model;
 using AuctionManagement.Persistence.ES.Tools;
 using EventStore.ClientAPI;
